@@ -40,7 +40,7 @@ namespace Forward.Motors.InternalCombustion  {
         public double C { get; set; }
         
         
-        public int TimeWork { get; set; }
+        public double TimeWork { get; set; }
         public double TemperatureEnvironment { get; set; }
         public double TemperatureEngine { get; set; }   
         

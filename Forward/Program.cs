@@ -10,8 +10,9 @@ namespace Forward {
                 if (temp > 10000 || temp <= -273) {
                     throw new Exception();
                 }
-                var InitializationData = new InitializationData("../../../Data.json",temp);
-                InitializationData.Realiz(InitializationData.InternalCombustionEngine);
+                var RunningTest = new InitializationDataAndRunningTests("../../../Data.json",temp);
+                RunningTest.ImplementationStandOne(RunningTest.InternalCombustionEngine);
+                RunningTest.ImplementationStandTwo(RunningTest.InternalCombustionEngine);
                 Console.ReadLine();
             }
             catch (FormatException) {

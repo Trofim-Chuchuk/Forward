@@ -6,11 +6,12 @@ using Forward.Stands;
 using Newtonsoft.Json;
 
 namespace Forward.Motor {
-    public class InitializationData {
+    public class InitializationDataAndRunningTests {
         public InternalCombustionEngine InternalCombustionEngine { get; set; }
         public TimeToOverheating TimeToOverheating { get; set; } = new TimeToOverheating();
+        public MaxPower MaxPower { get; set; } = new();
         
-        public InitializationData(string pathJson,double temperatureEnvironment ){
+        public InitializationDataAndRunningTests(string pathJson,double temperatureEnvironment ){
             try {
                 var data = JsonConvert.DeserializeObject<InternalCombustionEngine>(File.ReadAllText(pathJson));
                 if (data != null) {
@@ -28,10 +29,12 @@ namespace Forward.Motor {
             }
         }
 
-        public string Realiz(IEngine engine){
-            TimeToOverheating.LaunchSimulation(engine);
-            TimeToOverheating.VVV();
-            return "";
+        public void ImplementationStandOne(in IEngine engine){
+            TimeToOverheating.Simulation(engine);
+        }
+        
+        public void ImplementationStandTwo(in IEngine engine){
+            MaxPower.Simulation(engine);
         }
         
         
