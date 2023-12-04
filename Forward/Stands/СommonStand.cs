@@ -1,6 +1,4 @@
 using System;
-using System.Runtime.Intrinsics.X86;
-using Forward.Logic;
 using Forward.Motors;
 
 namespace Forward.Stands {
