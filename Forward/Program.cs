@@ -1,5 +1,5 @@
 ﻿using System;
-using Forward.Motor;
+using Forward.Logic;
 
 namespace Forward {
     class Program {

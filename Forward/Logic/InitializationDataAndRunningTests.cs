@@ -5,7 +5,7 @@ using Forward.Motors.InternalCombustion;
 using Forward.Stands;
 using Newtonsoft.Json;
 
-namespace Forward.Motor {
+namespace Forward.Logic {
     public class InitializationDataAndRunningTests {
         public InternalCombustionEngine InternalCombustionEngine { get; set; }
         public TimeToOverheating TimeToOverheating { get; set; } = new TimeToOverheating();
@@ -24,7 +24,7 @@ namespace Forward.Motor {
                 }
                 
             }
-            catch (Exception e) {
+            catch (Exception) {
                 throw new Exception("что то пошло не так с десирелизацией");
             }
         }

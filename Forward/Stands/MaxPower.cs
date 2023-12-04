@@ -1,5 +1,5 @@
 using System;
-using Forward.Motor;
+using Forward.Logic;
 using Forward.Motors;
 
 namespace Forward.Stands {
