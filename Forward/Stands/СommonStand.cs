@@ -2,7 +2,7 @@ using System;
 using Forward.Motors;
 
 namespace Forward.Stands {
-    public class СommonStand {
+    public abstract class СommonStand {
         public double AbsolutError { get; set; } = 10e-1;
         public int MaxTime { get; set; } = 10000;
          
